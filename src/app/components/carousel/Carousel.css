@@ -25,7 +25,6 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                animation: comeFromRight 2s; 
                 img {
                     height: 300px;
                     width: 200px;
@@ -51,10 +50,12 @@
 
 @keyframes comeFromRight {
     from {
-        transformX: 10rem;
+        transform: translateX(10rem);
+        opacity: 0; 
     }
     to {
-        transformX: 0rem;
+        transform: translateX(0rem);
+        opacity: 1; 
     }
 }
 

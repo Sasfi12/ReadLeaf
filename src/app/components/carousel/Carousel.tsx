@@ -32,8 +32,8 @@ export default function Carousel({randomized_data} : {randomized_data : Book[]})
             <section className="carousel-section">
                 <button className="previous-button" onClick={() => prevElem()}>Previous</button>
                 <div className="carousel-container">
-                    <div className="carousel-items" style={{width: ""}} key={e.id}>
-                        <div className="carousel-item hidden" id={`index${e.id}`} key={e.id}>
+                    <div className="carousel-items" style={{width: ""}} key={currentIndex}>
+                        <div className={`carousel-item`} id={`index${e.id}`} key={e.id} style={{animation: "comeFromRight 2s ease" }}>
                             <h1 >{e.title}</h1>
                             <img src={e.image_url} alt={`${e.title} image`} />
                             <Link href={`products/${e.id}`}>See more</Link>
