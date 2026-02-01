@@ -26,6 +26,8 @@ export default function Carousel({randomized_data} : {randomized_data : Book[]})
             
         } , [currentIndex])
         console.log(currentIndex)
+        useEffect(() => 
+              setE(data[currentIndex]) , [currentIndex])
         return (
             <section className="carousel-section">
                 <button className="previous-button" onClick={() => prevElem()}>Previous</button>
