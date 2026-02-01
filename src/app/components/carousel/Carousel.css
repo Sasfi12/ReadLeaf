@@ -48,8 +48,18 @@
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .carousel-item {
         transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .carousel-item {
+        transform: scale(0.25); 
+        img {
+            height: 100px ; 
+            width: 50px ;
+        }
     }
 }

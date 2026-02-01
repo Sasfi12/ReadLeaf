@@ -22,23 +22,17 @@ export default function Carousel({randomized_data} : {randomized_data : Book[]})
         if(currentIndex == -2) setTimeout(() =>{if(currentIndex == -2) setCurrentIndex(2)} , 6000)
  
     } , [currentIndex])
-
     return (
         <section className="carousel-section">
             <button className="previous-button" onClick={() => prevElem()}>Previous</button>
             <div className="carousel-container">
                    
-                    <div className="carousel-items">
-                        {randomized_data && 
-                            randomized_data.map((e) => {
-                                return (
-                                <div className="carousel-item" style={{transition: "0.5s",transform: `translateX(${69 * currentIndex}rem)`}} id={`index${e.id}`} key={e.id}>
+                    <div className="carousel-items" style={{width: ""}}>
+                                <div className="carousel-item" id={`index${e.id}`} key={e.id}>
                                     <h1 >{e.title}</h1>
                                     <img src={e.image_url} alt={`${e.title} image`} />
                                     <Link href={`products/${e.id}`}>See more</Link>
                                 </div>
-                            )
-                            })}
                     </div> 
                     
             </div>
