@@ -25,6 +25,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                animation: comeFromRight 2s; 
                 img {
                     height: 300px;
                     width: 200px;
@@ -45,6 +46,15 @@
     }
     &:active {
         background-color: greenyellow;
+    }
+}
+
+@keyframes comeFromRight {
+    from {
+        transformX: 10rem;
+    }
+    to {
+        transformX: 0rem;
     }
 }
 
