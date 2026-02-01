@@ -4,12 +4,6 @@ import Link from "next/link";
 import { Book } from "@/lib/apiTypes";
 export default function Carousel({randomized_data} : {randomized_data : Book[]}) { 
     const [currentIndex , setCurrentIndex] = useState(0);
-    const [data , setCurrentData] = useState(); 
-    if (randomized_data) {
-            for(let i = 0 ; i < randomized_data.length ; i++ ) {
-
-            }
-
         const prevElem = () => {
 
             if(currentIndex == 2) setCurrentIndex(() => -2) 
@@ -46,4 +40,3 @@ export default function Carousel({randomized_data} : {randomized_data : Book[]})
             </section>
         )
     }
-}
